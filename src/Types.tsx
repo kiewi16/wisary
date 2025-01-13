@@ -1,4 +1,4 @@
-export interface dummyProjects {
+export interface SampleProject {
     id: number,
     title: string,
 }
