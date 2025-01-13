@@ -1,10 +1,15 @@
 import React from "react";
+import { ProjectCardProps } from "./Types.tsx"; 
 
-function ProjectCard({ projects }) {
-    console.log("projects:", projects)
+function ProjectCard({ projects }: ProjectCardProps) {
     return (
-        <h1>test</h1>
+        <div>
+            {projects.map(project => (
+                <div key={project.id}>
+                    <p>{project.title}</p>
+                </div>
+            ))}
+        </div>
     )
 }
-
 export default ProjectCard
