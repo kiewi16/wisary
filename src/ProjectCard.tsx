@@ -108,7 +108,7 @@ function ProjectCard({ projects, deleteProject }: ProjectCardProps) {
         </Dialog.Content>
       </Dialog.Root>
     </div>
-  );
+  )
 }
 
 export default ProjectCard;
