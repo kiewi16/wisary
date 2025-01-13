@@ -1,8 +1,13 @@
 export interface SampleProject {
     id: number,
-    title: string,
+    name: string,
+}
+
+export interface deleteProjectFunction {
+    (id: number): void, 
 }
 
 export interface ProjectCardProps {
-    projects: SampleProject[]
+    projects: SampleProject[],
+    deleteProject: deleteProjectFunction
 }

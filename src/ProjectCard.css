@@ -1,0 +1,8 @@
+.project-card {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px; 
+    padding: 16px; 
+    box-sizing: border-box;
+    color: #3E63DD;
+    margin: 12px;
+}

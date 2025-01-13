@@ -7,11 +7,11 @@ import ProjectCard from './ProjectCard.tsx'
 
 function App() {
   const SampleProjects: SampleProject[] = [
-    { id: 1, title: "Project Alpha"},
-    { id: 2, title: "Project Beta"},
-    { id: 3, title: "Project Charlie"},
-    { id: 4, title: "Project Delta"},
-    { id: 5, title: "Project Echo"}
+    { id: 1, name: "Project Alpha"},
+    { id: 2, name:  "Project Beta"},
+    { id: 3, name:  "Project Charlie"},
+    { id: 4, name: "Project Delta"},
+    { id: 5, name: "Project Echo"}
   ]
   const [projects, setProjects] = useState<[]>([])
 
@@ -19,24 +19,20 @@ function App() {
     setProjects(SampleProjects)
   }, [])
 
+  function deleteProject(id: number) {
+    const filteredProjects = projects.filter(project => project.id !== id)
+    setProjects(filteredProjects)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <h3>Wisary Dashboard</h3>
         <Button style={{ marginTop: "39px" }}>New Project</Button>
       </header>
-      <ProjectCard projects={projects}/>
+      <ProjectCard projects={projects} deleteProject={deleteProject}/>
     </div>
-  );
+  )
 }
-
-// function App() {
-//   return (
-//     <Flex display="flex" flexDirection="row" justifyContent="space-between">
-//       <Text>Wisary Dasboard</Text>
-//       <Button>New Project</Button>
-//     </Flex>
-//   );
-// }
 
 export default App;
