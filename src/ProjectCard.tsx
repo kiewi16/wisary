@@ -74,9 +74,9 @@ function ProjectCard({ projects, deleteProject }: ProjectCardProps) {
         open={isRenameProjectOpen}
         onOpenChange={setIsRenameProjectOpen}
       >
-        <Dialog.Trigger asChild>
+        {/* <Dialog.Trigger asChild>
           <Button variant="soft">Rename Project</Button>
-        </Dialog.Trigger>
+        </Dialog.Trigger> */}
         <Dialog.Content maxWidth="450px">
           <Dialog.Title>Rename Project</Dialog.Title>
           <Dialog.Description size="2" mb="4">
